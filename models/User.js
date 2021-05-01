@@ -1,0 +1,40 @@
+const mongoose = require('mongoose')
+
+const usetSchema = mongoose.Schema({
+    name: {
+        type: String,
+        maxlength: 50
+
+    },
+    email:{
+        type : String,
+        tirm: true,
+        unique: 1
+
+    },
+    password:{
+        type: String,
+        minlength:5
+    },
+    lastname:{
+        type:String,
+        maxlength:50
+    },
+    role:{
+        type:Number,
+        default:0
+    },
+    image: String,
+    token:{
+        type:Stirng
+    },
+    tokenExp:{
+        type:Number
+    }
+
+    
+})
+
+const User =mongoose.model('User',userSchema)
+
+module.exports ={USer}
